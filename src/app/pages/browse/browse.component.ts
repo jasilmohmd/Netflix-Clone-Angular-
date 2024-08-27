@@ -43,11 +43,11 @@ export class BrowseComponent implements OnInit {
       .pipe(
         map(([movies, tvShows, nowPlaying, upcoming, popular, topRated]) => {
           
-          this.bannerDetials$ = this.movieService.getBannerDetail(movies.results[12].id)
+          this.bannerDetials$ = this.movieService.getBannerDetail(movies.results[0].id)
           //  .pipe(
           //     tap( bannerDetails => console.log('Banner Details:', bannerDetails)) // Log the data from the observable
           //   );
-          this.bannerVideo$ = this.movieService.getBannerVideo(movies.results[12].id);
+          this.bannerVideo$ = this.movieService.getBannerVideo(movies.results[0].id);
           
           return { movies, tvShows, nowPlaying, upcoming, popular, topRated }
 

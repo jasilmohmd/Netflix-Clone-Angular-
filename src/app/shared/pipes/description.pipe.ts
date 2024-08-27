@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DescriptionPipe implements PipeTransform {
 
   transform(value: string, arg:number): unknown {
-    return `${value.substring(0, arg)}...`;
+    return `${value?.substring(0, arg)}...`;
   }
 
 }
